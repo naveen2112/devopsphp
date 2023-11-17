@@ -25,5 +25,5 @@ RUN composer install
 RUN php artisan key:generate
 RUN php artisan migrate --force
 RUN chown -R www-data:www-data /var/www/devopsphp
-RUN chmod -R 775 /var/www/devopsphp
+RUN chmod -R 775 /var/www/devopsphp/storage
 CMD ["php-fpm"]
