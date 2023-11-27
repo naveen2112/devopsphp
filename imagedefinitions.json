@@ -1,6 +1,6 @@
 [
     {
-      "name": "ror",
+      "name": "testphp",
       "imageUri": "763768204702.dkr.ecr.ap-south-1.amazonaws.com/cicd-phpterraform:latest"
     },
     {
