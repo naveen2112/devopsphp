@@ -23,7 +23,8 @@ RUN git clone https://github.com/naveen2112/devopsphp.git
 WORKDIR /var/www/devopsphp
 RUN composer install
 RUN php artisan key:generate
-RUN php artisan migrate --force
 RUN chown -R www-data:www-data /var/www/devopsphp
 RUN chmod -R 775 /var/www/devopsphp/storage
+RUN chmod +x ./entrypoint.sh
+ENTRYPOINT [ "./entrypoint.sh" ]
 CMD ["php-fpm"]
